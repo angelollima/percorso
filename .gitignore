@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# Cargo
+target/
+
+# Tauri
+/target/
+.env
+
+# Logs
+*.log
+*.log.*
+
+# VSCode settings
+.vscode/
+
+# IDEs
+.idea/
+*.iml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
