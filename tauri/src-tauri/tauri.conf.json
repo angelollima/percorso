@@ -13,10 +13,11 @@
     "windows": [
       {
         "label": "main",
-        "title": "Tauri",
+        "title": "Percorso",
         "width": 800,
         "height": 600,
         "resizable": true,
+        "decorations": false,
         "fullscreen": false
       }
     ],
