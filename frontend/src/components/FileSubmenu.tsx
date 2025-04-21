@@ -3,6 +3,7 @@ import React from 'react';
 import { open } from '@tauri-apps/plugin-dialog';
 import { invoke } from '@tauri-apps/api/core';
 import { DirEntryInfo, SubmenuItem } from '../types';
+import { shuffle } from '../utils';
 
 interface FileSubmenuProps {
   onMouseLeave: () => void;
@@ -20,10 +21,14 @@ const FileSubmenu: React.FC<FileSubmenuProps> = ({
         directory: true,
       });
       if (typeof folder === 'string') {
+        // 1) lista todos
         const entries = await invoke<DirEntryInfo[]>('list_dir', {
           path: folder,
         });
-        onEntriesSelected(entries);
+        // 2) embaralha
+        const randomized = shuffle(entries);
+        // 3) envia o array todo, já embaralhado
+        onEntriesSelected(randomized);
       }
     } catch (error) {
       console.error('Erro ao listar diretório:', error);
