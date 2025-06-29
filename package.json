@@ -1,0 +1,21 @@
+{
+  "name": "language",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "tauri"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "tauri": "tauri",
+    "tauri:dev": "pnpm --filter tauri tauri dev",
+    "tauri:build": "pnpm --filter tauri tauri build",
+    "build:all": "pnpm build && pnpm tauri:build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
