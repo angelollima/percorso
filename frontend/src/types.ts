@@ -1,7 +1,8 @@
 // src/types.ts
 
 /** Representa um item dentro de um diretório */
-export interface DirEntryInfo {
+export interface DirectoryEntryInfo {
+  full_path: any;
   path: string;
   name: string;
   is_dir: boolean;
