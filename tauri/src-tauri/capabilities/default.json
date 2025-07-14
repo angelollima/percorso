@@ -3,7 +3,8 @@
   "identifier": "default",
   "description": "enables the default permissions",
   "windows": [
-    "main"
+    "main",
+    "preferences"
   ],
   "permissions": [
     "core:default",
@@ -13,6 +14,10 @@
     "core:window:allow-maximize",
     "core:window:allow-unmaximize",
     "core:window:allow-start-dragging",
-    "dialog:allow-open"
+    "core:webview:default",
+    "core:webview:allow-create-webview-window",
+    "core:webview:allow-webview-close",
+    "dialog:allow-open",
+    "store:default"
   ]
 }
